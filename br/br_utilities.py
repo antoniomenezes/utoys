@@ -1,9 +1,14 @@
 #!/usr/bin/python
 # coding=utf-8
 
-# Cálculo do DV do CPF de acordo com http://ghiorzi.org/DVnew.htm
+# The CPF number is the Brazilian individual taxpayer registry identification.
+# It is an 11-digit number in the format 000.000.000-00.
+# There is a two digit verification value (DV) used for CPF.
+# The following code was based on http://ghiorzi.org/DVnew.htm
+
+# Returns the first 9 CPF digits concatenated to DV digits
 def get_cpf_and_dv(value):
-  primary_val = str(value)
+  primary_val = str(value).rjust(9,'0')
   sum1 = 0
   sum2 = 0
   for i in range(len(primary_val)):
