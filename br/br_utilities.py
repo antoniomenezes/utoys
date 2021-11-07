@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # coding=utf-8
 
+# !pip install unidecode
 import random
 from unidecode import unidecode
 
