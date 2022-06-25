@@ -1,7 +1,8 @@
 #!/usr/bin/python
 # coding=utf-8
 
-# !pip install unidecode
+# pip install unidecode
+# pip install chardet
 import random
 from unidecode import unidecode
 
@@ -37,8 +38,8 @@ def get_cpf_and_dv(value):
 #
 def random_br_phone_book(phone_book, entries_quantity):
   # Loading proper nouns
-  proper_nouns_file = open('nomes_proprios.txt','r')
-  proper_nouns = proper_nouns_file.readlines()
+  proper_nouns_file = open('nomes_proprios.txt','r', encoding='UTF-8')
+  proper_nouns = proper_nouns_file.readlines()  
   proper_nouns_file.close()
 
   for n in range(entries_quantity):
